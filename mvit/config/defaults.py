@@ -14,7 +14,7 @@ _C = CfgNode()
 _C.TRAIN = CfgNode()
 
 # If True Train the model, else skip training.
-_C.TRAIN.ENABLE = True
+_C.TRAIN.ENABLE = False 
 
 # Dataset.
 _C.TRAIN.DATASET = "imagenet"
@@ -32,7 +32,7 @@ _C.TRAIN.CHECKPOINT_PERIOD = 10
 _C.TRAIN.AUTO_RESUME = True
 
 # Path to the checkpoint to load the initial weight.
-_C.TRAIN.CHECKPOINT_FILE_PATH = ""
+_C.TRAIN.CHECKPOINT_FILE_PATH = "/workspace/mvit/MViTv2_B_in1k.pyth"
 
 # If True, reset epochs when loading checkpoint.
 _C.TRAIN.CHECKPOINT_EPOCH_RESET = False
@@ -99,7 +99,7 @@ _C.MIXUP.LABEL_SMOOTH_VALUE = 0.1
 _C.TEST = CfgNode()
 
 # If True test the model, else skip the testing.
-_C.TEST.ENABLE = False
+_C.TEST.ENABLE = True
 
 # Dataset for testing.
 _C.TEST.DATASET = "imagenet"
@@ -108,7 +108,7 @@ _C.TEST.DATASET = "imagenet"
 _C.TEST.BATCH_SIZE = 64
 
 # Path to the checkpoint to load the initial weight.
-_C.TEST.CHECKPOINT_FILE_PATH = ""
+_C.TEST.CHECKPOINT_FILE_PATH = "/workspace/mvit/MViTv2_B_in1k.pyth"
 
 # If True, convert 3D conv weights to 2D.
 _C.TEST.CHECKPOINT_SQUEEZE_TEMPORAL = True

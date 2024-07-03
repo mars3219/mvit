@@ -51,13 +51,13 @@ def parse_args():
         "--cfg",
         dest="cfg_file",
         help="Path to the config file",
-        default="configs/MVIT_B.yaml",
+        default="/workspace/mvit/configs/MVITv2_B.yaml",
         type=str,
     )
     parser.add_argument(
         "opts",
         help="See mvit/config/defaults.py for all options",
-        default=None,
+        default='/workspace/mvit/mvit/config/defaults.py',
         nargs=argparse.REMAINDER,
     )
     if len(sys.argv) == 1:
